@@ -22,7 +22,7 @@ class WalkThrough4 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binder.continueBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_walkThrough4_to_mainActivity2)
+            findNavController().navigate(R.id.action_walkThrough4_to_mainActivity)
             requireActivity().finish()
         }
         binder.skipBtn.setOnClickListener {
