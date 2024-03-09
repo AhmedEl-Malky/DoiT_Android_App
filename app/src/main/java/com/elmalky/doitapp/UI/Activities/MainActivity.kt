@@ -1,7 +1,8 @@
-package com.elmalky.doitapp
+package com.elmalky.doitapp.UI.Activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.elmalky.doitapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

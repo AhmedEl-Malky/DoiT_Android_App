@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/walktrough_navigation_graph"
+    app:startDestination="@id/walkThrough1">
+
+    <fragment
+        android:id="@+id/walkThrough1"
+        android:name="com.elmalky.doitapp.UI.Walkthrough.WalkThrough1"
+        android:label="WalkThrough1"
+        tools:layout="@layout/fragment_walk_through1">
+        <action
+            android:id="@+id/action_walkThrough1_to_walkThrough2"
+            app:destination="@id/walkThrough2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkThrough2"
+        android:name="com.elmalky.doitapp.UI.Walkthrough.WalkThrough2"
+        android:label="WalkThrough2"
+        tools:layout="@layout/fragment_walk_through2">
+        <action
+            android:id="@+id/action_walkThrough2_to_walkThrough3"
+            app:destination="@id/walkThrough3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_walkThrough2_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkThrough3"
+        android:name="com.elmalky.doitapp.UI.Walkthrough.WalkThrough3"
+        android:label="WalkThrough3"
+        tools:layout="@layout/fragment_walk_through3">
+        <action
+            android:id="@+id/action_walkThrough3_to_walkThrough4"
+            app:destination="@id/walkThrough4"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_walkThrough3_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkThrough4"
+        android:name="com.elmalky.doitapp.UI.Walkthrough.WalkThrough4"
+        android:label="WalkThrough4"
+        tools:layout="@layout/fragment_walk_through4">
+        <action
+            android:id="@+id/action_walkThrough4_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_walkThrough4_to_mainActivity2"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.elmalky.doitapp.UI.Activities.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main" />
+</navigation>
