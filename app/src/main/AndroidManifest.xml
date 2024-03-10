@@ -15,7 +15,7 @@
         <activity
             android:name=".UI.Activities.SplashScreen"
             android:exported="true"
-            android:theme="@style/walkthrough_style">
+            android:theme="@style/splash_screen_style">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

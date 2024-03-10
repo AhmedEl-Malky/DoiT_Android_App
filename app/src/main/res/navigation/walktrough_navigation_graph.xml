@@ -20,8 +20,8 @@
             app:destination="@id/walkThrough2"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@android:anim/fade_out" />
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/walkThrough2"
@@ -33,8 +33,8 @@
             app:destination="@id/walkThrough3"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@android:anim/fade_out" />
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_walkThrough2_to_mainActivity"
             app:destination="@id/mainActivity" />
@@ -49,8 +49,8 @@
             app:destination="@id/walkThrough4"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@android:anim/fade_out" />
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_walkThrough3_to_mainActivity"
             app:destination="@id/mainActivity" />
@@ -62,7 +62,8 @@
         tools:layout="@layout/fragment_walk_through4">
         <action
             android:id="@+id/action_walkThrough4_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            app:destination="@id/mainActivity"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <activity
         android:id="@+id/splashScreen"
