@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="Tint_Black">#333333</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_Text">#FFFFFFFF</color>
     <color name="Shade_white">#e6e6e6</color>
     <color name="Lavender">#8692f7</color>
     <color name="Shade_Lavender">#7983de</color>
@@ -9,4 +11,16 @@
     <color name="Red">#E03131</color>
     <color name="Yellow">#FCC419</color>
     <color name="Blue">#339AF0</color>
+    <color name="Gray">#ced4da</color>
+    <color name="Grape">#da77f2</color>
+    <color name="Green">#51cf66</color>
+    <color name="Orange">#fd7e14</color>
+    <color name="Tint_Red">#FF6B6B</color>
+    <color name="Violet">#9775fa</color>
+    <color name="Cyan">#3bc9db</color>
+    <color name="Lime">#a9e34b</color>
+    <color name="Pink">#f783ac</color>
+    <color name="Indigo">#748FFC</color>
+    <color name="Teal">#38d9a9</color>
+
 </resources>
