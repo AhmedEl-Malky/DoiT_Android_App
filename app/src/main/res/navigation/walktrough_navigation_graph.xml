@@ -62,8 +62,7 @@
         tools:layout="@layout/fragment_walk_through4">
         <action
             android:id="@+id/action_walkThrough4_to_mainActivity"
-            app:destination="@id/mainActivity"
-            app:enterAnim="@android:anim/fade_in" />
+            app:destination="@id/mainActivity" />
     </fragment>
     <activity
         android:id="@+id/splashScreen"
