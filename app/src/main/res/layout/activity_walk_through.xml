@@ -11,7 +11,7 @@
         style="@style/walkthrough_style"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UI.Activities.WalkThroughActivity">
+        tools:context=".ui.Activities.WalkThroughActivity">
 
 
         <androidx.fragment.app.FragmentContainerView

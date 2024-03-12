@@ -1,4 +1,4 @@
-package com.elmalky.doitapp.UI.Activities
+package com.elmalky.doitapp.ui.Activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -9,13 +9,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UI.Activities.MainActivity">
+        tools:context=".ui.Activities.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.elmalky.doitapp.UI.Fragments.TODOFragment" />
+            android:name="com.elmalky.doitapp.ui.Fragments.TODOFragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

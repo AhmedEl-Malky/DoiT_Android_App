@@ -5,6 +5,13 @@
 
     <data>
 
+        <variable
+            name="item"
+            type="com.elmalky.doitapp.models.dataBase.entities.Note" />
+
+        <variable
+            name="listener"
+            type="com.elmalky.doitapp.adapters.NoteInteractions" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".UI.Fragments.TODOFragment">
+            tools:context=".ui.Fragments.TODOFragment">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
@@ -52,10 +59,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
-            app:layout_constraintEnd_toEndOf="@+id/note_recycler"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vguideline2"
+            app:layout_constraintStart_toStartOf="@+id/vguideline1"
             app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout"
             app:lottie_autoPlay="true"
+            app:lottie_loop="true"
             app:lottie_rawRes="@raw/tasks_animation"
             app:lottie_speed="1.25" />
 
@@ -84,6 +92,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="@dimen/_24sdp"
+            app:borderWidth="0dp"
             app:srcCompat="@drawable/add" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -92,5 +101,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

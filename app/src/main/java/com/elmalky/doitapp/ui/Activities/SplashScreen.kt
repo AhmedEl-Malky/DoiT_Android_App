@@ -1,4 +1,4 @@
-package com.elmalky.doitapp.UI.Activities
+package com.elmalky.doitapp.ui.Activities
 
 import android.content.Intent
 import android.os.Bundle
