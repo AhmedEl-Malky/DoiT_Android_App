@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/_8sdp"
-    android:layout_marginVertical="@dimen/_4sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
     app:cardCornerRadius="@dimen/_12sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,7 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_medium"
-            android:text="Do my home work and study to the college to finish the quiz start from tomorow and finish all this"
+            android:text="Do my home work and study to "
             android:textColor="@color/Tint_Black"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintEnd_toStartOf="@+id/vguideline7"

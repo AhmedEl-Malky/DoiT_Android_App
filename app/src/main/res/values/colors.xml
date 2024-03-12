@@ -5,10 +5,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_Text">#FFFFFFFF</color>
     <color name="Shade_white">#e6e6e6</color>
+    <color name="Gray_background">#FAFAFA</color>
     <color name="Lavender">#8692f7</color>
     <color name="Shade_Lavender">#7983de</color>
     <color name="Tint_Lavender">#aab3f9</color>
-    <color name="Red">#E03131</color>
+    <color name="Red">#f03e3e</color>
     <color name="Yellow">#FCC419</color>
     <color name="Blue">#339AF0</color>
     <color name="Gray">#ced4da</color>

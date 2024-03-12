@@ -1,4 +1,4 @@
-package com.elmalky.doitapp.UI.Walkthrough
+package com.elmalky.doitapp.UI.Fragments.Walkthrough
 
 import android.os.Bundle
 import android.view.LayoutInflater
