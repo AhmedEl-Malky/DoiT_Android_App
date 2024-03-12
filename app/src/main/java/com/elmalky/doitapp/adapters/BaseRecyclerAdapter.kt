@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.elmalky.doitapp.BR
 
 
 interface BaseItemInteractions
@@ -32,8 +31,8 @@ abstract class BaseRecyclerAdapter<T>(
         val currentItem = items[position]
         when (holder) {
             is ItemViewHolder -> {
-                holder.binder.setVariable(BR.item, currentItem)
-                holder.binder.setVariable(BR.listener, listener)
+//                holder.binder.setVariable(BR.item,currentItem)
+//                holder.binder.setVariable(BR.listener, listener)
             }
         }
     }
