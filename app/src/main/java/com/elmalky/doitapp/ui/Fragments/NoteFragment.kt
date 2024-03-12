@@ -1,4 +1,4 @@
-package com.elmalky.doitapp.UI.Fragments
+package com.elmalky.doitapp.ui.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
