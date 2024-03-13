@@ -28,7 +28,8 @@
             android:theme="@style/walkthrough_style" />
         <activity
             android:name=".ui.Activities.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/main_activity_style" />
     </application>
 
 </manifest>
