@@ -90,7 +90,7 @@
             android:tint="@color/white_Text"
             app:borderWidth="0dp"
             app:fabCustomSize="@dimen/_50sdp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="@dimen/_24sdp"
             app:srcCompat="@drawable/add" />
@@ -108,13 +108,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.02" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.92" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/vguideline2"
