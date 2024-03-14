@@ -16,10 +16,12 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.elmalky.doitapp.R
 import com.elmalky.doitapp.databinding.FragmentTODOBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class TODOFragment : Fragment() {
     lateinit var binder: FragmentTODOBinding
+    lateinit var todoFab: FloatingActionButton
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,12 +32,26 @@ class TODOFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        todoFab = requireActivity().findViewById(R.id.todo_fab)
         binder.todoToolbar.subtitle = "todos_num"
         setUpBottomDialog()
     }
 
+//    override fun onResume() {
+//        super.onResume()
+//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_up)
+//        binder.todoFab.startAnimation(animation)
+//
+//    }
+
+    //    override fun onPause() {
+//        super.onPause()
+//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_down)
+//        binder.todoFab.startAnimation(animation)
+//
+//    }
     private fun setUpBottomDialog() {
-        binder.todoFab.setOnClickListener {
+        todoFab.setOnClickListener {
             showBottomDialog()
         }
     }
