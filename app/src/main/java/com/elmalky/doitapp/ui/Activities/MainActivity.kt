@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var binder: ActivityMainBinding
     lateinit var popUp: Animation
     lateinit var popDown: Animation
-
-    //    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binder = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -67,11 +65,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-//    private fun setUpNavGraph() {
-//        navController = findNavController(R.id.main_fragment_container)
-//        binder.bottomNavBar.setupWithNavController(navController)
-//        bottomNavBarNavigations()
-//    }
 
     private fun bottomNavBarNavigations() {
         binder.bottomNavBar.apply {

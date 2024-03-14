@@ -30,17 +30,4 @@ class NoteFragment : Fragment() {
         }
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_up)
-//        binder.noteFab.startAnimation(animation)
-//
-//
-//    }
-
-//    override fun onPause() {
-//        super.onPause()
-//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_down)
-//        binder.noteFab.startAnimation(animation)
-//    }
 }

@@ -37,19 +37,6 @@ class TODOFragment : Fragment() {
         setUpBottomDialog()
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_up)
-//        binder.todoFab.startAnimation(animation)
-//
-//    }
-
-    //    override fun onPause() {
-//        super.onPause()
-//        val animation = AnimationUtils.loadAnimation(requireActivity(),R.anim.pop_down)
-//        binder.todoFab.startAnimation(animation)
-//
-//    }
     private fun setUpBottomDialog() {
         todoFab.setOnClickListener {
             showBottomDialog()
@@ -58,8 +45,6 @@ class TODOFragment : Fragment() {
 
     private fun showBottomDialog() {
         val bottomDialog = Dialog(requireActivity())
-//        submit_todo.isEnabled = false
-
         bottomDialog.apply {
             requestWindowFeature(Window.FEATURE_NO_TITLE)
             setContentView(R.layout.bottom_sheet)
