@@ -10,4 +10,9 @@ object Constants {
         val todoFragment = TODOFragment()
         val fragmentsList = listOf(noteFragment, todoFragment)
     }
+
+    object Names {
+        const val SP_NAME = "DOIT_SP"
+        const val FIRST_START = "FIRST_START"
+    }
 }
