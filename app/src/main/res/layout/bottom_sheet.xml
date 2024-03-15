@@ -42,6 +42,7 @@
             android:id="@+id/submit_todo"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:visibility="gone"
             android:background="@drawable/submit_selector"
             android:src="@drawable/submit_icon"
             app:layout_constraintBottom_toTopOf="@+id/hguideline2"
@@ -50,18 +51,19 @@
             app:layout_constraintTop_toTopOf="@+id/hguideline1" />
 
         <EditText
-
             android:id="@+id/input_todo_text"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/_200sdp"
+            android:minHeight="@dimen/_50sdp"
             android:background="@drawable/input_todo_shape"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="New Todo"
-            android:paddingStart="@dimen/_12sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_6sdp"
             android:textColorHint="#888"
             android:textCursorDrawable="@drawable/edit_text_cursor"
-            app:layout_constraintBottom_toTopOf="@+id/hguideline4"
             app:layout_constraintEnd_toStartOf="@+id/vguideline6"
             app:layout_constraintStart_toStartOf="@+id/close_todo"
             app:layout_constraintTop_toTopOf="@+id/hguideline3" />

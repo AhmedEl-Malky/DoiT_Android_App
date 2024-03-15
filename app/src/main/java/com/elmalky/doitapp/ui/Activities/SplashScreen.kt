@@ -15,17 +15,15 @@ class SplashScreen : AppCompatActivity() {
         val appSP = getSharedPreferences(Constants.Names.SP_NAME, Context.MODE_PRIVATE)
 //        appSP.edit().putBoolean(Constants.Names.FIRST_START,true).apply()
         val firstTime = appSP.getBoolean(Constants.Names.FIRST_START, false)
-        if (firstTime) {
-            Handler().postDelayed({
+        Handler().postDelayed({
+            if (firstTime) {
                 startActivity(Intent(this, WalkThroughActivity::class.java))
                 appSP.edit().putBoolean(Constants.Names.FIRST_START, false).apply()
                 finish()
-            }, 1700)
-        } else {
-            Handler().postDelayed({
+            } else {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
-            }, 1700)
-        }
+            }
+        }, 1700)
     }
 }
