@@ -19,16 +19,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binder = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setUpAnimations()
+        setUpViewPager()
     }
 
     private fun setUpAnimations() {
         popUp = AnimationUtils.loadAnimation(this, R.anim.pop_up)
         popDown = AnimationUtils.loadAnimation(this, R.anim.pop_down)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        setUpViewPager()
     }
 
     private fun setUpViewPager() {

@@ -1,13 +1,14 @@
 package com.elmalky.doitapp.ui.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.elmalky.doitapp.R
 import com.elmalky.doitapp.databinding.FragmentNoteBinding
+import com.elmalky.doitapp.ui.Activities.TypingNoteActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -26,7 +27,8 @@ class NoteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         noteFab = requireActivity().findViewById(R.id.note_fab)
         noteFab.setOnClickListener {
-            Toast.makeText(requireActivity(), "Hello", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireActivity(), TypingNoteActivity::class.java)
+            startActivity(intent)
         }
     }
 

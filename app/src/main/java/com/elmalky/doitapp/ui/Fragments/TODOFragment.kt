@@ -12,7 +12,6 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageButton
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.elmalky.doitapp.R
 import com.elmalky.doitapp.databinding.FragmentTODOBinding
@@ -23,8 +22,7 @@ class TODOFragment : Fragment() {
     lateinit var binder: FragmentTODOBinding
     lateinit var todoFab: FloatingActionButton
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binder = FragmentTODOBinding.inflate(layoutInflater)
         return binder.root
@@ -50,8 +48,7 @@ class TODOFragment : Fragment() {
             setContentView(R.layout.bottom_sheet)
             show()
             window?.setLayout(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT
             )
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             window?.attributes?.windowAnimations = R.style.bottom_dialog
@@ -66,16 +63,6 @@ class TODOFragment : Fragment() {
 
         close_todo.setOnClickListener {
             bottomDialog.dismiss()
-        }
-        submit_todo.visibility = View.INVISIBLE
-        todoInputText.addTextChangedListener {
-            if (it != null) {
-                if (it.isNotEmpty()) {
-                    submit_todo.visibility = View.VISIBLE
-                } else {
-                    submit_todo.visibility = View.INVISIBLE
-                }
-            }
         }
         bottomDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
 
