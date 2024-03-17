@@ -44,7 +44,7 @@
             android:layout_margin="@dimen/_12sdp"
             android:backgroundTint="@color/Lavender"
             android:tint="@color/white_Text"
-            android:visibility="gone"
+            android:visibility="invisible"
             app:borderWidth="0dp"
             app:fabCustomSize="@dimen/_50sdp"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
