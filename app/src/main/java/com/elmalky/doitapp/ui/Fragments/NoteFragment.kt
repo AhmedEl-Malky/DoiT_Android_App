@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.elmalky.doitapp.R
 import com.elmalky.doitapp.adapters.NoteInteractions
 import com.elmalky.doitapp.adapters.NoteRecyclerAdapter
@@ -40,12 +42,22 @@ class NoteFragment : Fragment(), NoteInteractions {
             val intent = Intent(requireActivity(), TypingNoteActivity::class.java)
             startActivity(intent)
         }
+        callBacks()
     }
 
     override fun onNoteClickListener(note: Note) {
         val intent = Intent(requireActivity(), TypingNoteActivity::class.java)
         intent.putExtra(Constants.Names.NOTE_NAME, note)
         startActivity(intent)
+    }
+
+    fun callBacks() {
+        binder.recyclerGridViewBtn.setOnClickListener {
+            binder.noteRecycler.layoutManager = GridLayoutManager(requireActivity(), 2)
+        }
+        binder.recyclerListViewBtn.setOnClickListener {
+            binder.noteRecycler.layoutManager = LinearLayoutManager(requireActivity())
+        }
     }
 
 }
