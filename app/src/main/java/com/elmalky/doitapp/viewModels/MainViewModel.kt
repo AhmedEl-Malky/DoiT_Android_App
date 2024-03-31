@@ -49,8 +49,8 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             val newTodo = todo.copy(
                 task = newTask,
-                priority = todo.priority,
-                priorityColor = todo.priorityColor
+                priority = todoPriority.value,
+                priorityColor = todoPriorityColor.value
             )
             todoRepo.updateTodo(newTodo)
         }
