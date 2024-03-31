@@ -39,6 +39,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
+                android:id="@+id/delete_note"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/selectors_typing_note"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/Tint_Black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/hguideline11"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline15"
+                app:layout_constraintStart_toStartOf="@+id/vguideline16"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
                 android:id="@+id/submit_typing_note"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -94,20 +108,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.15" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/vguideline13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.35" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/vguideline14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.45" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/vguideline15"

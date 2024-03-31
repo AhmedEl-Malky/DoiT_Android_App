@@ -49,4 +49,10 @@ class TypingNoteViewModel : ViewModel() {
         noteColor.postValue("#8692f7")
         noteDate.postValue("")
     }
+
+    fun deleteNote(note: Note) {
+        viewModelScope.launch(Dispatchers.IO) {
+            noteRepo.deleteNote(note)
+        }
+    }
 }

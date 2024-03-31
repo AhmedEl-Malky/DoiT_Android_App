@@ -2,7 +2,6 @@ package com.elmalky.doitapp.ui.Activities
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
@@ -28,17 +27,22 @@ class TypingNoteActivity : AppCompatActivity() {
         binder = DataBindingUtil.setContentView(this, R.layout.activity_typing_note)
         binder.lifecycleOwner = this
         binder.nvm = nViewModel
-        nViewModel.noteTitle.observe(this) {
-            Log.i("MYTAG", it)
-        }
         setUpActivity()
         setUpColorPicker()
         binder.noteColorFab.setOnClickListener {
             openColorPicker()
         }
         val note = intent.getParcelableExtra<Note>(Constants.Names.NOTE_NAME)
-        if (note != null)
+        if (note != null) {
             setNoteItemToLiveData(note)
+            binder.deleteNote.visibility = View.VISIBLE
+            binder.deleteNote.setOnClickListener {
+                nViewModel.deleteNote(note)
+                finish()
+            }
+        } else {
+            binder.deleteNote.visibility = View.GONE
+        }
     }
 
     private fun openColorPicker() {
