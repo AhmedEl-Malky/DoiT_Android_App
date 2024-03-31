@@ -13,14 +13,27 @@
         android:theme="@style/Theme.DoiTApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".ui.Activities.TypingNoteActivity"
+            android:exported="false"
+            android:theme="@style/typing_note_activity_style" />
+        <activity
+            android:name=".ui.Activities.SplashScreen"
+            android:exported="true"
+            android:theme="@style/splash_screen_style">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.Activities.WalkThroughActivity"
+            android:exported="false"
+            android:theme="@style/walkthrough_style" />
+        <activity
+            android:name=".ui.Activities.MainActivity"
+            android:exported="false"
+            android:theme="@style/main_activity_style" />
     </application>
 
 </manifest>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DoiT app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="walkTrough2">Here\'s a mobile platform that helps you create task or to list so that it can help you in every job easier and faster</string>
+    <string name="walkTrough3">Easy-to-understand user interface  that makes you more comfortable when you want to create a task or to do list, DoiT can also improve productivity</string>
+    <string name="walkTrough4">Easy-to-understand user interface  that makes you more comfortable when you want to create a task or to do list, DoiT can also improve productivity</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus sapien ac magna fringilla, ut tincidunt ex lobortis. Integer eu justo a magna venenatis fringilla. Phasellus ut magna eget libero condimentum fermentum.</string>
 </resources>

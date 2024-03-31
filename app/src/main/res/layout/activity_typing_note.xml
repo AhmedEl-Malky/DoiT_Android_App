@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="nvm"
+            type="com.elmalky.doitapp.viewModels.TypingNoteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.Activities.TypingNoteActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/hguideline21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/typing_note_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/selectors_typing_note"
+                android:src="@drawable/arrow_back"
+                android:tint="@color/Tint_Black"
+                app:layout_constraintBottom_toTopOf="@+id/hguideline11"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline12"
+                app:layout_constraintStart_toStartOf="@+id/vguideline11"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/delete_note"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/selectors_typing_note"
+                android:src="@drawable/delete_icon"
+                android:tint="@color/Tint_Black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/hguideline11"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline15"
+                app:layout_constraintStart_toStartOf="@+id/vguideline16"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/submit_typing_note"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/selectors_typing_note"
+                android:src="@drawable/submit_icon"
+                android:tint="@color/Tint_Black"
+                android:visibility="gone"
+                submitVisibilityContent="@{nvm.noteContent}"
+                submitVisibilityTitle="@{nvm.noteTitle}"
+                android:onClick="addNewNote"
+                app:layout_constraintBottom_toTopOf="@+id/hguideline11"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline18"
+                app:layout_constraintStart_toStartOf="@+id/vguideline17"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/typing_note_date"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="bottom"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:text="@{nvm.noteDate}"
+                android:textColor="#777"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/vguideline11"
+                app:layout_constraintTop_toTopOf="@+id/hguideline11"
+                tools:text="9/04/2003" />
+
+            <TextView
+                android:id="@+id/typing_note_char_count"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:text="@{String.valueOf(nvm.noteContent.length())}"
+                android:textColor="#666"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/typing_note_date"
+                app:layout_constraintTop_toTopOf="@+id/hguideline11"
+                tools:text="0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hguideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/typing_note_heading"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@={nvm.noteTitle}"
+            android:background="@drawable/input_todo_shape"
+            android:fontFamily="@font/inter_medium"
+            android:hint="Heading"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:scrollbars="none"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/Tint_Black"
+            android:textColorHint="@color/Gray"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toTopOf="@+id/hguideline22"
+            app:layout_constraintEnd_toStartOf="@+id/vguideline22"
+            app:layout_constraintStart_toStartOf="@+id/vguideline21"
+            app:layout_constraintTop_toTopOf="@+id/hguideline21" />
+
+        <EditText
+            android:id="@+id/typing_note_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="top"
+            android:background="@drawable/input_todo_shape"
+            android:maxHeight="@dimen/_560sdp"
+            android:padding="@dimen/_6sdp"
+            android:text="@={nvm.noteContent}"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vguideline22"
+            app:layout_constraintStart_toStartOf="@+id/vguideline21"
+            app:layout_constraintTop_toBottomOf="@+id/typing_note_heading" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/note_color_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            paletteColor="@{nvm.noteColor}"
+            tools:backgroundTint="@color/Lavender"
+            android:tint="@color/white"
+            app:borderWidth="0dp"
+            app:fabCustomSize="@dimen/_48sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="@dimen/_24sdp"
+            app:srcCompat="@drawable/palette_icon" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hguideline21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hguideline22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

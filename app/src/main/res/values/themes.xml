@@ -1,8 +1,41 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.DoiTApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.DoiTApp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+
+    <style name="walkthrough_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="splash_screen_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="main_activity_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/Gray_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/Gray_background</item>
+    </style>
+
+    <style name="typing_note_activity_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="bottom_dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="bottom_dialog_style">
+        <item name="android:navigationBarColor">#f8f8f8</item>
     </style>
 
     <style name="Theme.DoiTApp" parent="Base.Theme.DoiTApp" />
