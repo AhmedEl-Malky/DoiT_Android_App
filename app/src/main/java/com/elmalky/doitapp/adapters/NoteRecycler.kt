@@ -8,4 +8,6 @@ class NoteRecyclerAdapter(val items: List<Note>, val listener: NoteInteractions)
     override val layoutId = R.layout.item_note
 }
 
-interface NoteInteractions : BaseItemInteractions
+interface NoteInteractions : BaseItemInteractions {
+    fun onNoteClickListener(note: Note)
+}

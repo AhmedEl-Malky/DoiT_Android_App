@@ -8,4 +8,7 @@ class TODORecycler(val items: List<TODO>, val listener: TODOInteractions) :
     override val layoutId = R.layout.item_todo
 }
 
-interface TODOInteractions : BaseItemInteractions
+interface TODOInteractions : BaseItemInteractions {
+    fun deleteTODO(todo: TODO)
+    fun onTODOClickListener(todo: TODO)
+}

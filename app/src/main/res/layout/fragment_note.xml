@@ -4,14 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="item"
-            type="com.elmalky.doitapp.models.dataBase.entities.Note" />
-
-        <variable
-            name="listener"
-            type="com.elmalky.doitapp.adapters.NoteInteractions" />
+            name="vm"
+            type="com.elmalky.doitapp.viewModels.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,7 +53,8 @@
             android:id="@+id/notes_animation"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="visible"
+            lottieVisibility="@{vm.allNotes}"
+            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toStartOf="@+id/vguideline2"
             app:layout_constraintStart_toStartOf="@+id/vguideline1"
@@ -72,14 +68,18 @@
             android:id="@+id/note_recycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="gone"
+            items="@{vm.allNotes}"
+            recyclerVisibility="@{vm.allNotes}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:spanCount="2"
+            tools:listitem="@layout/item_note"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout"
             app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_todo" />
+            tools:visibility="invisible" />
 
 
         <androidx.constraintlayout.widget.Guideline

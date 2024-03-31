@@ -12,4 +12,17 @@
             <corners android:radius="16dp" />
         </shape>
     </item>
+    <item android:state_checkable="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Gray" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <item android:state_checkable="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Lavender" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
 </selector>
