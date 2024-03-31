@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.elmalky.doitapp.models.dataBase.entities.TODO" />
+
+        <variable
+            name="listener"
+            type="com.elmalky.doitapp.adapters.TODOInteractions" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:onClick="@{() -> listener.onTODOClickListener(item)}"
+        app:cardCornerRadius="@dimen/_12sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/priority_background"
+                priorityVisibility="@{item.priorityColor}"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/hguideline21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:background="@color/Red"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/priority_flag"
+                    priorityFlag="@{item.priority}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="center"
+                    android:src="@drawable/flag"
+                    app:layout_constraintBottom_toTopOf="@+id/hguideline1"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/vguideline2"
+                    app:layout_constraintStart_toStartOf="@+id/vguideline1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/priority_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="start|center"
+                    android:text="@{item.priority}"
+                    android:textColor="@color/white_Text"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/hguideline1"
+                    app:layout_constraintEnd_toStartOf="@+id/vguideline4"
+                    app:layout_constraintStart_toStartOf="@+id/vguideline3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="High Priority" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/hguideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/_22sdp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vguideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vguideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.1" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vguideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vguideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.09" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RadioButton
+                android:id="@+id/todo_radio"
+                radioCheck="@{item.state}"
+                radioColor="@{item.priorityColor}"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:onClick="@{() -> listener.deleteTODO(item)}"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline5"
+                app:layout_constraintStart_toStartOf="@+id/vguideline21"
+                app:layout_constraintTop_toBottomOf="@+id/priority_background"
+                tools:buttonTint="@color/Red" />
+
+            <TextView
+                android:id="@+id/todo_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:text="@{item.task}"
+                android:textColor="@color/Tint_Black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/vguideline7"
+                app:layout_constraintStart_toStartOf="@+id/vguideline6"
+                app:layout_constraintTop_toTopOf="@+id/todo_radio"
+                tools:text="Task todo" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hguideline21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_22sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.11" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.125" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vguideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.965" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
