@@ -1,8 +1,10 @@
 package com.elmalky.doitapp.ui.Activities
 
 import android.os.Bundle
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
@@ -10,16 +12,20 @@ import com.elmalky.doitapp.R
 import com.elmalky.doitapp.adapters.ViewPager
 import com.elmalky.doitapp.databinding.ActivityMainBinding
 import com.elmalky.doitapp.util.Constants
+import com.elmalky.doitapp.viewModels.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     lateinit var binder: ActivityMainBinding
     lateinit var popUp: Animation
     lateinit var popDown: Animation
+    val viewModel: MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binder = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        setUpAnimations()
         setUpViewPager()
+        binder.vm = viewModel
+        binder.lifecycleOwner = this
+        setUpAnimations()
     }
 
     private fun setUpAnimations() {
@@ -33,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         binder.mainViewPager.currentItem = 1
         viewPagerNavigations()
         bottomNavBarNavigations()
+
+
     }
 
     private fun viewPagerNavigations() {
@@ -42,19 +50,19 @@ class MainActivity : AppCompatActivity() {
                 super.onPageSelected(position)
                 when (position) {
                     0 -> {
-                        binder.noteFab.show()
                         binder.todoFab.hide()
-                        binder.bottomNavBar.selectedItemId = R.id.noteFragment
+                        binder.noteFab.show()
                         binder.todoFab.startAnimation(popDown)
                         binder.todoFab.startAnimation(popUp)
+                        binder.bottomNavBar.selectedItemId = R.id.noteFragment
                     }
 
                     1 -> {
-                        binder.todoFab.show()
                         binder.noteFab.hide()
-                        binder.bottomNavBar.selectedItemId = R.id.TODOFragment
+                        binder.todoFab.show()
                         binder.noteFab.startAnimation(popDown)
                         binder.noteFab.startAnimation(popUp)
+                        binder.bottomNavBar.selectedItemId = R.id.TODOFragment
                     }
                 }
             }
@@ -88,4 +96,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun changeTodoPriority(view: View) {
+        viewModel.todoPriority.postValue(view.tag.toString())
+        when (view.tag.toString()) {
+            "High Priority" -> viewModel.todoPriorityColor.postValue("#f03e3e")
+            "Mid Priority" -> viewModel.todoPriorityColor.postValue("#FCC419")
+            "Low Priority" -> viewModel.todoPriorityColor.postValue("#339AF0")
+        }
+        Constants.Fragments.todoFragment.priorityAlertDialog.dismiss()
+    }
+
 }

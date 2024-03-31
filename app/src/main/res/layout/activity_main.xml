@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="vm"
+            type="com.elmalky.doitapp.viewModels.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
