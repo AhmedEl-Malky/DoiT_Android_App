@@ -49,6 +49,32 @@
             </com.google.android.material.appbar.AppBarLayout>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+        <ImageButton
+            android:id="@+id/recycler_list_view_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/selectors_typing_note"
+            android:scaleType="center"
+            android:src="@drawable/list_view"
+            android:tint="@color/Lavender"
+            app:layout_constraintBottom_toTopOf="@+id/hguideline1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+            app:layout_constraintStart_toStartOf="@+id/vguideline4" />
+
+        <ImageButton
+            android:id="@+id/recycler_grid_view_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/selectors_typing_note"
+            android:scaleType="center"
+            android:src="@drawable/grid_view"
+            android:tint="@color/Lavender"
+            app:layout_constraintBottom_toTopOf="@+id/hguideline1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/vguideline6"
+            app:layout_constraintStart_toStartOf="@+id/vguideline5" />
+
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/notes_animation"
             android:layout_width="0dp"
@@ -102,5 +128,40 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hguideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.111" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
